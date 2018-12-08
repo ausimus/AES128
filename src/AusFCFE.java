@@ -1,6 +1,7 @@
 import javax.crypto.*;
 import javax.crypto.spec.*;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.io.*;
 import java.math.*;
@@ -40,8 +41,14 @@ public class AusFCFE implements WindowConstants
         JFrame frame = new JFrame();
         frame.setContentPane(new AusFCFE().panelMain);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        frame.setResizable(false);
+
         frame.pack();
         frame.setVisible(true);
+
+        Dimension d = new Dimension();
+        d.setSize(645, 100);
+        frame.setSize(d.getSize());
     }
 
     private void encrypt()
