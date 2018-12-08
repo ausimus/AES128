@@ -49,6 +49,8 @@ public class AusFCFE implements WindowConstants
         Dimension d = new Dimension();
         d.setSize(645, 100);
         frame.setSize(d.getSize());
+
+        frame.setLocationRelativeTo(null);
     }
 
     private void encrypt()
