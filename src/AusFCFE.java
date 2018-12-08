@@ -141,7 +141,7 @@ public class AusFCFE implements WindowConstants
         }
         catch (NoSuchAlgorithmException e)
         {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, e.toString(), "Error", JOptionPane.INFORMATION_MESSAGE);
         }
         return key;
     }
@@ -162,7 +162,7 @@ public class AusFCFE implements WindowConstants
         }
         catch (IOException e)
         {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, e.toString(), "Error", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 }
