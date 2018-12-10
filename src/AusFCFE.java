@@ -1,5 +1,6 @@
 import javax.crypto.*;
 import javax.crypto.spec.*;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ItemEvent;
@@ -44,12 +45,22 @@ public class AusFCFE implements WindowConstants
         frame.setResizable(false);
 
         frame.pack();
-        frame.setVisible(true);
 
+        Image im = null;
+        try
+        {
+            im = ImageIO.read(AusFCFE.class.getResource("/res/icon.png"));
+        }
+        catch (IOException ex)
+        {
+            JOptionPane.showMessageDialog(null, ex.toString(), "Error", JOptionPane.INFORMATION_MESSAGE);
+        }
+        frame.setIconImage(im);
+        frame.setTitle("AES128");
         Dimension d = new Dimension();
         d.setSize(645, 100);
         frame.setSize(d.getSize());
-
+        frame.setVisible(true);
         frame.setLocationRelativeTo(null);
     }
 
